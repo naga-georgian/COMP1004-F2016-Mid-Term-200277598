@@ -1,4 +1,19 @@
-﻿using System;
+﻿/*******************************
+ * Application: COMP1004-F2016-Mid-Term Exam
+ * Author: Naga Rimmalapudi
+ * Student ID: 200277598
+ * Date: October 20, 2016 
+ * 
+ * Description: This application uses
+ *   several windows forms and logics
+ *   to create character's:
+ *   - Name
+ *   - Stats
+ *   - Race
+ * 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +22,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace COMP1004_F2016_Mid_Term_200277598
 {
@@ -27,20 +44,23 @@ namespace COMP1004_F2016_Mid_Term_200277598
             // Step 2 - use the ShowDialog method of the aboutbox
             aboutBox.ShowDialog();
         }
-
+        //This  method is activated when user clicks on Back button
         private void BackButton_Click(object sender, EventArgs e)
         {
             this.previousForm.Show();
             this.Close();
         }
 
+        //This  method is activated when user clicks on exit menu item
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        // form loader
         private void FinalForm_Load(object sender, EventArgs e)
         {
+            // re-assigning values to display in the final form
             FirstNameTextBox.Text = Program.character.FirstName;
             LastNameTextBox.Text = Program.character.LastName;
             RaceTextBox.Text = Program.character.Race;

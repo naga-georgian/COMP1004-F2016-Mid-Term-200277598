@@ -1,4 +1,18 @@
-﻿using System;
+﻿/*******************************
+ * Application: COMP1004-F2016-Mid-Term Exam
+ * Author: Naga Rimmalapudi
+ * Student ID: 200277598
+ * Date: October 20, 2016 
+ * 
+ * Description: This application uses
+ *   several windows forms and logics
+ *   to create character's:
+ *   - Name
+ *   - Stats
+ *   - Race
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +26,7 @@ namespace COMP1004_F2016_Mid_Term_200277598
 {
     public partial class GenerateNameForm : Form
     {
+        // Declaring private variables
         private string _FirstName;
         private string _LastName;
         public GenerateNameForm()
@@ -19,18 +34,22 @@ namespace COMP1004_F2016_Mid_Term_200277598
             InitializeComponent();
         }
 
+        // Form loader
         private void GenerateNameForm_Load(object sender, EventArgs e)
         {
             GenerateNames();
         }
 
+        //This method is activated when user clicks on Generate names
         private void GenerateButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
+            // Assigning the values to the Program.character.FirstName and LastName
             Program.character.FirstName = FirstNametextBox.Text;
             Program.character.LastName = LastNameTextBox.Text;
         }
 
+        //This method generates random values for first name and last name fields
         private void GenerateNames()
         {
             Random rand = new Random();
@@ -48,6 +67,7 @@ namespace COMP1004_F2016_Mid_Term_200277598
             Program.character.LastName = _LastName;
         }
 
+        //This method is activated when user clicks on Next button
         private void NextButton_Click(object sender, EventArgs e)
         {
             AbilityGeneratorForm abilityGeneratorForm = new AbilityGeneratorForm();

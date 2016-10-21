@@ -1,4 +1,18 @@
-﻿using System;
+﻿/*******************************
+ * Application: COMP1004-F2016-Mid-Term Exam
+ * Author: Naga Rimmalapudi
+ * Student ID: 200277598
+ * Date: October 20, 2016 
+ * 
+ * Description: This application uses
+ *   several windows forms and logics
+ *   to create character's:
+ *   - Name
+ *   - Stats
+ *   - Race
+ * 
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
